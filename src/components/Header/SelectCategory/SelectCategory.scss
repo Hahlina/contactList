@@ -1,0 +1,40 @@
+.selectWrapper{
+  width: 200px;
+
+}
+
+.customSelect {
+  &__control{
+    background-color: #2e3646 !important; ;
+    border: none !important; ;
+    color: azure !important;
+  }
+   &__value-container{
+     cursor: text !important;
+     input{
+       color: azure !important;
+
+     }
+  }
+&__input-container{
+  color: azure !important;
+}
+&__indicator{
+  cursor: pointer !important;
+}
+  &__single-value{
+    color: azure !important;
+  }
+  &__menu{
+    background-color: #2e3646 !important;
+    color: azure !important;
+  }
+  &__option{
+    cursor: pointer !important;
+    &--is-focused{
+      background-color: lighten( #2e3646, 10%) !important;
+
+    }
+
+  }
+}
