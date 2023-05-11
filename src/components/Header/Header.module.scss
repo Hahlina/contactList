@@ -6,6 +6,7 @@
   align-items: center;
   gap: 120px;
   padding: 0 20px;
+  justify-content: space-around;
 }
 .logo{
   //background-image: url("public/logo.png");
@@ -16,4 +17,8 @@
   font-size: 30px;
   color: azure;
   font-family: monospace, sans-serif;
+}
+.inputBtn{
+  display: flex;
+  gap: 50px;
 }

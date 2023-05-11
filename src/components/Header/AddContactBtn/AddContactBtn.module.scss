@@ -6,6 +6,13 @@
   font-size: 30px;
   color: azure;
   position: relative;
+  cursor: pointer;
+  &:active{
+    transform: scale(0.95);
+  }
+  &:hover{
+    opacity: 0.8;
+  }
 }
 .btnAddContact:before{
   content: "+";
@@ -13,4 +20,6 @@
   top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+
 }

@@ -1,0 +1,101 @@
+.form{
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+  border-radius: 10px;
+  margin: 0;
+  text-align: left;
+  width: 100%;
+}
+h3{
+  text-align: center;
+}
+//#registrationForm::after {
+//  content: "";
+//  position: absolute;
+//  top: 0;
+//  left: 0;
+//  width: 100%;
+//  height: 100%;
+//  background: url(./public/img/succesful.gif) center no-repeat;
+//  background-color: rgba(204, 204, 204, 0.547);
+//  opacity: 0;
+//  visibility: hidden;
+//  border-radius: 10px;
+//}
+//#registrationForm.sending::after {
+//  opacity: 1;
+//  visibility: visible;
+//}
+
+label {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 4px;
+}
+input{
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+button {
+  background-color: rgb(145, 181, 169);
+  color: #efefef;
+  border: none;
+  border-radius: 8px;
+  width: 100px;
+  height: 35px;
+  transition: 0.3s;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(142, 201, 182);
+  box-shadow: 0 0 0 5px rgb(161, 223, 204);
+  color: rgb(2, 2, 2);
+}
+button:active {
+  transform: scale(1.05);
+}
+//.error input {
+//  border: 1px solid red;
+//}
+
+
+input:focus {
+  outline: 1px solid #687d8c;
+}
+
+button{
+  padding: 0;
+
+}
+select{
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+
+}
+.checkbox{
+  display: flex;
+  height: 40px;
+
+  input{
+    width: 14px;
+    margin-left: 10px;
+    border: none;
+    &:focus{
+      outline: none;
+    }
+  }
+}
+.btnWrapper{
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+}
