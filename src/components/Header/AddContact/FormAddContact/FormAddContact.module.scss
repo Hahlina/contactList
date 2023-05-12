@@ -41,7 +41,7 @@ input{
   font-size: 16px;
   box-sizing: border-box;
 }
-button {
+.button {
   background-color: rgb(145, 181, 169);
   color: #efefef;
   border: none;
@@ -53,12 +53,12 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.button:hover {
   background-color: rgb(142, 201, 182);
   box-shadow: 0 0 0 5px rgb(161, 223, 204);
   color: rgb(2, 2, 2);
 }
-button:active {
+.button:active {
   transform: scale(1.05);
 }
 //.error input {

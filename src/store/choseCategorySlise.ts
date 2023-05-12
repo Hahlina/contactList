@@ -1,47 +1,31 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-type Contact = {
-  id: string;
-  firstName: string;
-  secondName: string;
-  email: string;
-  phone: string;
-  category: string;
-  gender: string;
-  favorite: boolean;
+type Category = {
+  value: string;
+  label: string;
 };
-type ContactState = {
-  list: Contact[];
+type CategoryState = {
+  category: Category;
 };
-const initialState: ContactState = {
-  list: [],
+const initialState: CategoryState = {
+  category: {
+    value: "allContacts",
+    label: "All contacts",
+  },
 };
-const contactSlice = createSlice({
-  name: "contactList",
+const categorySlice = createSlice({
+  name: "choseCategory",
   initialState,
   reducers: {
-    addContact(state, action: PayloadAction<Contact>) {
-      state.list.push(action.payload);
-    },
-    removeContact(state, action: PayloadAction<string>) {
-      const updatedList = state.list.filter(
-        (contact) => contact.id !== action.payload
-      );
-      state.list = updatedList;
-    },
-    updateContact(state, action: PayloadAction<Contact>) {
-      const { id, ...newData } = action.payload; // Видаляємо id з даних для оновлення
-      const index = state.list.findIndex((contact) => contact.id === id); // Знаходимо індекс контакту за його id
-      if (index !== -1) {
-        // Якщо знайшли контакт, то оновлюємо його
-        state.list[index] = {
-          ...state.list[index],
-          ...newData,
-        };
-      }
+    addCategory(state, action: PayloadAction<Category>) {
+      state.category = {
+        ...state,
+        ...action.payload,
+      };
     },
   },
 });
-export const { addContact, removeContact, updateContact } =
-  contactSlice.actions;
-export default contactSlice.reducer;
+
+export const { addCategory } = categorySlice.actions;
+
+export default categorySlice.reducer;

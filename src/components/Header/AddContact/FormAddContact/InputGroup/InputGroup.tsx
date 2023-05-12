@@ -3,7 +3,7 @@ import { useFormContext } from "react-hook-form";
 import s from "./InputGroup.module.scss";
 interface InputGroupProps extends InputHTMLAttributes<HTMLInputElement> {
   label: string;
-  type?: "text" | "password" | "email" | "number" | "checkbox";
+  type?: "text" | "password" | "email" | "number" | "checkbox" | "file";
   field: string;
 }
 
